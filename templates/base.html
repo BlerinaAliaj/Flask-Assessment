@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
+    <link rel="stylesheet"
+          href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css"/>
+
+    <link>{% block link %}{% endblock %} 
+</head>
+
+<body>
+<div class="container">
+
+    <!-- This is where the main content goes. -->
+  {% block body %}
+      BODY OF PAGE GOES HERE VIA INHERITANCE
+  {% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Application Form{% endblock %}
+{% block link %}
+    <link rel="stylesheet" href="/static/styles.css">
+{% endblock %}
+
+{% block body %}
+<!-- Application Form HTML -->
+
+<h1>Application Form</h1>
+<h3>Please fill out information below with your first name, last name, 
+    salary requirements (number) and the position for which you are applying.</h3>
+
+<form action="/application-success" method="Get">
+    <label for="firstname">First Name:</label>
+    <input id="firstname" type="text" name="firstname"><br>
+    <label for="lastname">Last Name:</label>
+    <input id="lastname" type="text" name="lastname"><br>
+    <label for="salary">Salary Requirement: $</label>
+    <input id="salary" type="number" name="salary"><br>
+    <label for="position">Please choose position for which you are applying:</label>
+    <select id="position" name="job">
+        <!-- For loop that creates job positions as options -->
+        {% for job in jobs %}
+        <option value="{{ job }}">{{ job }}</option>
+        {% endfor %}
+    </select><br>
+    <input type="submit">
+</form>
+
+{% endblock %}

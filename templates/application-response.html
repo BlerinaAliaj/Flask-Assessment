@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Application Response{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="/static/homepage.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- Block goes here -->
+
+<img src="http://s.isha.ws/blog/wp-content/uploads/2016/04/success-by-intent-not-by-chance-1090x614.jpg">
+
+
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+
+    <h2>Thank you, {{ firstname }} {{ lastname }}, for applying to be a {{ jobtitle }}. 
+    Your minimum salary requirement is ${{ salary }}.
+    </h2>
+
+    <p>Click <a href="/">here</a> to return to the main Ubermelon jobs page.</p>
+
+    <p>Click <a href="/application-form">here</a> to return to the job application 
+        and apply for more jobs.</p>
+    </div>
+</div>
+{% endblock %}
